@@ -11,5 +11,6 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
         <mapping class="com.flyaway.entity.Users"/>
         <mapping class="com.flyaway.entity.Flights"/>
+        <mapping class="com.flyaway.entity.Places"/>
     </session-factory>
 </hibernate-configuration>

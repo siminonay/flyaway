@@ -1,10 +1,6 @@
 package com.flyaway.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="flights")
@@ -15,9 +11,11 @@ public class Flights {
     private int fId;
     private String dateOfFlight;
     private String flightName;
-    private String placeId;
     private String price;
     private String seats;
+    @OneToOne
+    @JoinColumn(name = "pId")
+    private Places places;
 
     public int getfId() {
         return fId;
@@ -43,14 +41,6 @@ public class Flights {
         this.flightName = flightName;
     }
 
-    public String getPlaceId() {
-        return placeId;
-    }
-
-    public void setPlaceId(String placeId) {
-        this.placeId = placeId;
-    }
-
     public String getPrice() {
         return price;
     }
@@ -66,5 +56,14 @@ public class Flights {
     public void setSeats(String seats) {
         this.seats = seats;
     }
+
+    public Places getPlaces() {
+        return places;
+    }
+
+    public void setPlaces(Places places) {
+        this.places = places;
+    }
+
 
 }

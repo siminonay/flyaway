@@ -89,7 +89,7 @@
         <label><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="password" required>
 
-        <input type="submit" name="Login"/>
+        <input type="submit" name="login" value="Login"/>
     </div>
 </form>
 </div>
